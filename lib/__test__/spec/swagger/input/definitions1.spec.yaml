@@ -1,0 +1,11 @@
+definitions:
+  Error:
+    type: object
+    properties:
+      status:
+        type: string
+      message:
+        type: string
+    required:
+    - status
+    - message

@@ -1,0 +1,19 @@
+definitions:
+  SearchResults:
+    type: object
+    properties:
+      count:
+        type: integer
+      totalCount:
+        type: integer
+      offset:
+        type: integer
+      results:
+        type: array
+        items:
+          type: object
+    required:
+    - count
+    - totalCount
+    - offset
+    - results

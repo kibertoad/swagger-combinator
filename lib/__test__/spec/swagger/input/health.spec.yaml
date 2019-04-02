@@ -1,0 +1,16 @@
+paths:
+  '/v1/health/ping':
+    get:
+      summary: Verify API health
+      operationId: getHealthStatus
+      tags:
+      - health
+      responses:
+        '200':
+          description: 'Health status'
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                enum: [SERVING]

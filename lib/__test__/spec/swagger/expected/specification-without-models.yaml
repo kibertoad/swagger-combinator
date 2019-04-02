@@ -1,0 +1,107 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Core Services",
+    "version": "1.0.0"
+  },
+  "host": "core.stg.bloomon.nl",
+  "paths": {
+    "/v1/health/ping": {
+      "get": {
+        "summary": "Verify API health",
+        "operationId": "getHealthStatus",
+        "tags": [
+          "health"
+        ],
+        "responses": {
+          "200": {
+            "description": "Health status",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string",
+                  "enum": [
+                    "SERVING"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "responses": {
+    "ResourceDeleted": {
+      "description": "Resource deleted"
+    },
+    "ServerError": {
+      "description": "Internal server error",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "BadRequest": {
+      "description": "The request did not satisfy the requirements",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "NotFound": {
+      "description": "The specified resource was not found",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    },
+    "Unauthorized": {
+      "description": "Unauthorized",
+      "schema": {
+        "$ref": "#/definitions/Error"
+      }
+    }
+  },
+  "definitions": {
+    "Error": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message"
+      ]
+    },
+    "SearchResults": {
+      "type": "object",
+      "properties": {
+        "count": {
+          "type": "integer"
+        },
+        "totalCount": {
+          "type": "integer"
+        },
+        "offset": {
+          "type": "integer"
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      },
+      "required": [
+        "count",
+        "totalCount",
+        "offset",
+        "results"
+      ]
+    }
+  }
+}
