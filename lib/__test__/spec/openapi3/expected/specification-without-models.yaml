@@ -64,7 +64,7 @@
     }
   },
   "info": {
-    "title": "Core Services",
+    "title": "Test Service",
     "version": "1.0.0"
   },
   "openapi": "3.0.0",
@@ -101,7 +101,7 @@
   },
   "servers": [
   {
-    "url": "https://core.stg.bloomon.nl"
+    "url": "https://test.stg.service.nl"
   }
   ]
 }

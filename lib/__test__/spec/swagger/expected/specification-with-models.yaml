@@ -1,10 +1,10 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "Core Services",
+    "title": "Test Service",
     "version": "1.0.0"
   },
-  "host": "core.stg.bloomon.nl",
+  "host": "test.stg.service.nl",
   "paths": {
     "/v1/health/ping": {
       "get": {
