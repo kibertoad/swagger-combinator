@@ -31,5 +31,11 @@
     "openapi",
     "merge",
     "combine"
+  ],
+  "files": [
+    "README.md",
+    "LICENSE",
+    "index.js",
+    "lib/*"
   ]
 }
