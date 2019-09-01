@@ -1,33 +1,35 @@
 {
   "name": "swagger-combinator",
   "description": "Combines separate OpenAPI fragments into single specification file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "lint": "eslint .",
-    "prettier": "prettier --write \"{{lib,scripts}/**/*.js,jest.config.js\"}",
+    "prettier": "prettier --write \"{{lib,scripts}/**/*.js,jest.config.js,index.js\"}",
     "test:ci": "npm run lint && npm run test:code-coverage",
     "test:code-coverage": "jest --runInBand --config jest.config.js"
   },
   "dependencies": {
-    "glob": "^7.1.3",
-    "js-yaml": "^3.13.0",
-    "lodash": "^4.17.11",
-    "validation-utils": "^2.8.0"
+    "glob": "^7.1.4",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "validation-utils": "^4.0.1"
   },
   "optionalDependencies": {
     "json-schema-to-openapi-schema": "^0.3.0",
     "objection-swagger": "^3.1.1"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-prettier": "^3.0.1",
-    "jest": "^24.6.0",
-    "prettier": "1.16.4",
-    "sinon": "^7.3.1"
+    "eslint": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "sinon": "^7.4.1"
   },
   "keywords": [
     "swagger",
-    "openapi"
+    "openapi",
+    "merge",
+    "combine"
   ]
 }
